@@ -1,0 +1,15 @@
+{
+  "product": "EQ Pressure Tool",
+  "generatedAt": null,
+  "releases": [
+    {
+      "version": "v0.1.2",
+      "title": "v0.1.2",
+      "date": "2026-07-04",
+      "target": "nodemcu-32s-no-ble",
+      "recommended": true,
+      "manifest": "releases/v0.1.2/manifest.json",
+      "notes": ""
+    }
+  ]
+}

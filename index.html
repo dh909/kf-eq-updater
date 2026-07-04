@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EQ Pressure Tool Firmware</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="site-brand" aria-label="Kalamata Freedivers">
+        <img class="brand-logo" src="assets/kalamata-freedivers-logo.png" alt="Kalamata Freedivers" />
+      </header>
+
+      <section class="workspace" aria-labelledby="page-title">
+        <section class="hero">
+          <header class="masthead">
+            <p class="eyebrow">EQ Pressure Tool</p>
+            <h1 id="page-title">Firmware update</h1>
+          </header>
+        </section>
+
+        <section class="update-panel" aria-label="Firmware installer">
+          <section class="device-section" aria-labelledby="device-section-title">
+            <div id="browser-status" class="status" role="status"></div>
+            <p class="eyebrow">Device</p>
+            <div class="device-row">
+              <div class="device-copy">
+                <h2 id="device-section-title">No device selected</h2>
+                <p id="device-meta">Select the USB device once.</p>
+              </div>
+              <button id="select-device" class="secondary-action" type="button">Select device</button>
+            </div>
+          </section>
+
+          <section class="release-picker" aria-label="Firmware version">
+            <p class="eyebrow">Firmware version</p>
+            <div id="release-list" class="release-list"></div>
+          </section>
+
+          <section class="install-footer" aria-label="Install selected firmware">
+            <button id="flash-button" class="primary-action" type="button" disabled>
+              <span class="action-title">Install firmware</span>
+              <span id="flash-button-version" class="action-version"></span>
+            </button>
+          </section>
+
+          <section class="flash-status" aria-live="polite" hidden>
+            <p id="flash-message"></p>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <div id="install-modal" class="install-modal" role="dialog" aria-modal="true" aria-labelledby="install-modal-title" hidden>
+      <section class="install-card">
+        <p class="eyebrow">Installing firmware</p>
+        <h2 id="install-modal-title">Firmware</h2>
+        <p id="install-modal-message" class="install-message">Preparing firmware...</p>
+        <div class="install-progress-row">
+          <div class="progress-track" aria-hidden="true">
+            <div id="install-progress-bar" class="progress-bar"></div>
+          </div>
+          <p id="install-modal-percent" class="install-percent">0%</p>
+        </div>
+        <button id="install-modal-close" class="secondary-action install-close" type="button" hidden>Close</button>
+      </section>
+    </div>
+
+    <div id="release-notes-modal" class="notes-modal" role="dialog" aria-modal="true" aria-labelledby="notes-modal-title" hidden>
+      <button id="notes-modal-backdrop" class="notes-backdrop" type="button" aria-label="Close release notes"></button>
+      <section class="notes-card">
+        <button id="notes-modal-close" class="notes-close" type="button" aria-label="Close release notes">Close</button>
+        <p class="eyebrow">Release notes</p>
+        <h2 id="notes-modal-title">Release notes</h2>
+        <div id="notes-modal-content" class="notes-content"></div>
+      </section>
+    </div>
+  </body>
+</html>
