@@ -3,11 +3,20 @@
   "generatedAt": null,
   "releases": [
     {
+      "version": "v0.1.3",
+      "title": "v0.1.3",
+      "date": "2026-07-04",
+      "target": "nodemcu-32s-no-ble",
+      "recommended": true,
+      "manifest": "releases/v0.1.3/manifest.json",
+      "notes": "- Persist the reference pressure line across restarts.\n- Change the reference pressure +/- buttons to 1.0 kPa steps.\n- Apply Kalamata Freedivers colors to the control buttons, pressure display, reference line, and chart watermark."
+    },
+    {
       "version": "v0.1.2",
       "title": "v0.1.2",
       "date": "2026-07-04",
       "target": "nodemcu-32s-no-ble",
-      "recommended": true,
+      "recommended": false,
       "manifest": "releases/v0.1.2/manifest.json",
       "notes": ""
     }

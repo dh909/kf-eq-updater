@@ -1,0 +1,3 @@
+- Persist the reference pressure line across restarts.
+- Change the reference pressure +/- buttons to 1.0 kPa steps.
+- Apply Kalamata Freedivers colors to the control buttons, pressure display, reference line, and chart watermark.
